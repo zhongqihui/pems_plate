@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pems_plate:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="pems_plate.war">
+      <element id="artifact" artifact-name="pems_plate:war exploded" />
+    </root>
+  </artifact>
+</component>

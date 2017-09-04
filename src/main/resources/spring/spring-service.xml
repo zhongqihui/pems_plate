@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 为什么不要在Spring的配置里，配置上XSD的版本号？
+因为如果没有配置版本号，取的就是当前jar里的XSD文件，减少了各种风险。
+而且这样约定大于配置的方式很优雅。
+ -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 组件扫描service -->
+    <context:component-scan base-package="com.zqh.pems.service"/>
+
+</beans>

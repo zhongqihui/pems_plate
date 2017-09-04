@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zqh.pems.mapper.UserInfoMapper">
+
+    <!-- 通用查询结果列-->
+    <sql id="_columns">
+        sn,real_name,phone,email,status,insert_time,update_time
+    </sql>
+
+    <select id="selectById" parameterType="long" resultType="com.zqh.pems.po.UserInfo">
+        SELECT <include refid="_columns"/> FROM user_info WHERE sn = #{value}
+    </select>
+
+</mapper>
